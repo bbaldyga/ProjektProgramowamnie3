@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.SzczegolyComputer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+          Title="Szczegoly Komnputera" Height="270" Width="350"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize" MouseDown="rectangle2_MouseDown">
+    <Grid>
+
+
+
+
+
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF7D86BF" Offset="0.0"/>
+                    <GradientStop Color="#FF7E7E7E" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+
+        <WrapPanel Name="plnComputerForm" Margin="0,25,0,0" >
+            <Label Content="ID:" Width="115" Margin="5" Foreground="White" Opacity="0.6" />
+            <TextBox MinWidth="180" Margin="5" Text="{Binding ID}" IsReadOnly="True" Background="{x:Null}" Foreground="White" BorderBrush="White" Opacity="0.6" SelectionBrush="White"/>
+            <Label Content="Czy mozna go użyć:" Width="115" Margin="5" Foreground="White" Opacity="0.6"  />
+            <TextBox x:Name="Work" MinWidth="180" Margin="5" Text="" Background="{x:Null}" Foreground="White" BorderBrush="White" Opacity="0.6" IsReadOnly="True" SelectionBrush="White"/>
+            <Label Content="Czy jest używany:" Width="115" Margin="5" Foreground="White" Opacity="0.6" />
+            <TextBox x:Name="Use" MinWidth="180" Margin="5" Text=""  Foreground="White" Background="{x:Null}" BorderBrush="White" Opacity="0.6" IsReadOnly="True" SelectionBrush="White"/>
+            <Label Content="Specyfikacja:" Width="115" Margin="5" Foreground="White" Opacity="0.6"  />
+            <TextBox MaxWidth="180" MinWidth="180" Margin="5" Text="{Binding Specification}"  Background="{x:Null}" Foreground="White" BorderBrush="White" Opacity="0.6" IsReadOnly="True" SelectionBrush="White"/>
+            <Label Content="System Operacyjny:" Width="115" Margin="5" Foreground="White" Opacity="0.6" />
+            <TextBox MinWidth="180" Margin="5" Text="{Binding OperatingSystem}" Background="{x:Null}" Foreground="White" BorderBrush="White" Opacity="0.6" IsReadOnly="True" SelectionBrush="White"/>
+            <Button Content="Powrót" Height="20" Width="100" Background="Transparent" BorderBrush="White" Foreground="White" Opacity="0.6" Margin="5,25,0,0" Click="Button_Click"/>
+        </WrapPanel>
+
+
+
+    </Grid>
+    
+
+</Window>

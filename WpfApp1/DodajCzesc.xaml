@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.DodajCzesc" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="DodajCzesc" Height="110" Width="650"  AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize" MouseDown="rectangle2_MouseDown">
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF7D86BF" Offset="0.0"/>
+                    <GradientStop Color="#FF7E7E7E" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel>
+        <WrapPanel Name="plnPartForm" >
+            <Label Content="Nazwa Części:" Width="115" Margin="5" Foreground="White" Opacity="0.6" />
+            <TextBox x:Name="PartType" Width="170" Height="30"  Margin="5" Text="{Binding PartName}" Background="{x:Null}" BorderBrush="White" Opacity="0.6" SelectionBrush="White" />
+            <Label Content="Ilość:" Width="115" Margin="5" Foreground="White" Opacity="0.6" />
+            <TextBox x:Name="Ammount" Width="170" Height="30"  Margin="5" PreviewTextInput="Ammount_PreviewTextInput" Text="{Binding Ammount}" SelectionBrush="White" BorderBrush="White" Background="{x:Null}" Opacity="0.6" />
+        </WrapPanel>
+            <Button Content="Powrót" Height="25" Width="100" Margin="-150,30,30,0"  Background="{x:Null}" BorderBrush="White" Foreground="White" Opacity="0.5" FontWeight="Light" Click="Button_Click"  />
+            <Button Content="Dodaj Częśc" Height="25" Width="100" Margin="-500,-25,-700,0"  Background="{x:Null}" BorderBrush="White" Foreground="White" Opacity="0.5" FontWeight="Light" Click="Button_Click_1"   />
+            
+        </StackPanel>
+
+
+    </Grid>
+</Window>
